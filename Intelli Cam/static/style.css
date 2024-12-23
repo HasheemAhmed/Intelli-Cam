@@ -1,0 +1,122 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f; 
+    color: #e0e0e0; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: #27293d; 
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+}
+
+nav img {
+    height: auto;
+}
+
+
+nav img:first-child {
+    width: 60px; 
+    margin-right: 15px;
+}
+
+
+nav img:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 40px; 
+}
+
+
+
+
+.sidebar {
+    position: absolute;
+    top: 100px; 
+    left: 0;
+    width: 220px;
+    height: 100%; 
+    background-color: #27293d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.sidebar button {
+    background-color: #3e3f57;
+    color: #00bcd4; 
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar button:hover {
+    background-color: #00bcd4; 
+    color: #27293d;
+    transform: scale(1.05);
+}
+
+.sidebar button:active {
+    background-color: #008c9e; 
+    transform: scale(1);
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px 20px 20px 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); 
+}
+
+
+#video {
+    border: 4px solid #00bcd4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 80%;
+    max-height: 100%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        font-size: 1.2rem;
+    }
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .content {
+        margin-left: 200px; 
+    }
+}
